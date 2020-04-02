@@ -1,29 +1,21 @@
 class GardensController < ApplicationController
   before_action :set_garden, only: [:show, :edit, :update, :destroy]
 
-  # GET /gardens
-  # GET /gardens.json
   def index
     @gardens = Garden.all
   end
 
-  # GET /gardens/1
-  # GET /gardens/1.json
   def show
     @plant = Plant.new
   end
 
-  # GET /gardens/new
   def new
     @garden = Garden.new
   end
 
-  # GET /gardens/1/edit
   def edit
   end
 
-  # POST /gardens
-  # POST /gardens.json
   def create
     @garden = Garden.new(garden_params)
 
